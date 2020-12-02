@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Whack_A_Mole</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body onload="set()">
+
+      <div class="header container-fluid">
+        <div class="row">
+        <div class="col-md-2 col-sm-2 col-xs-2">
+            <h3 id="userName">Guest</h3>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2">
+            <h4>High Score:<span id="highScore"></span></h4>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2">
+            <h4>Score : <span id="Score"></span></h4>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2">
+            <h4>Time-Left : <span id="timeLeft"></span></h4>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2">
+            <button type="button" class="btn btn-success" onclick="startGame()">Start</button>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2">
+            <button type="button" class="btn btn-danger" onclick="stop()">Pause</button>
+        </div>
+      </div>
+      </div>
+      
+      <div class="container-fluid bgcolor">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="front">
+                    <img src="mole.png" class="hide" id="mole1" onclick="hit(1)" alt="Image Missing will be Uploaded Soon!!!">
+                </div>
+               <div class="back">
+                    <img src="dirt.png" class="hole" alt="Image Missing Will be Uploaded Soon!!!">
+               </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="front">
+                    <img src="mole.png" class="hide" id="mole2" onclick="hit(2)" alt="Image Missing will be Uploaded Soon!!!">
+                </div>
+               <div class="back">
+                    <img src="dirt.png" class="hole" alt="Image Missing Will be Uploaded Soon!!!">
+               </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="front">
+                    <img src="mole.png" class="hide" id="mole3" onclick="hit(3)" alt="Image Missing will be Uploaded Soon!!!">
+                </div>
+               <div class="back">
+                    <img src="dirt.png" class="hole" alt="Image Missing Will be Uploaded Soon!!!">
+               </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="front">
+                        <img src="mole.png" class="hide" id="mole4" onclick="hit(4)" alt="Image Missing will be Uploaded Soon!!!">
+                    </div>
+                   <div class="back">
+                        <img src="dirt.png" class="hole" alt="Image Missing Will be Uploaded Soon!!!">
+                   </div>
+            </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="front">
+                    <img src="mole.png" class="hide" id="mole5" onclick="hit(5)" alt="Image Missing will be Uploaded Soon!!!">
+                </div>
+               <div class="back">
+                    <img src="dirt.png" class="hole" alt="Image Missing Will be Uploaded Soon!!!">
+               </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="front">
+                    <img src="mole.png" class="hide" id="mole6" onclick="hit(6)" alt="Image Missing will be Uploaded Soon!!!">
+                </div>
+                <div class="back">
+                    <img src="dirt.png" class="hole" alt="Image Missing Will be Uploaded Soon!!!">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="front">
+                    <img src="mole.png" class="hide" id="mole7" onclick="hit(7)" alt="Image Missing will be Uploaded Soon!!!">
+                </div>
+               <div class="back">
+                    <img src="dirt.png" class="hole" alt="Image Missing Will be Uploaded Soon!!!">
+               </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="front">
+                    <img src="mole.png" class="hide" id="mole8" onclick="hit(8)" alt="Image Missing will be Uploaded Soon!!!">
+                </div>
+               <div class="back">
+                    <img src="dirt.png" class="hole" alt="Image Missing Will be Uploaded Soon!!!">
+               </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="front">
+                    <img src="mole.png" class="hide" id="mole9" onclick="hit(9)" alt="Image Missing will be Uploaded Soon!!!">
+                </div>
+               <div class="back">
+                    <img src="dirt.png" class="hole" alt="Image Missing Will be Uploaded Soon!!!">
+               </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="front">
+                    <img src="mole.png" class="hide" id="mole10" onclick="hit(10)" alt="Image Missing will be Uploaded Soon!!!">
+                </div>
+               <div class="back">
+                    <img src="dirt.png" class="hole" alt="Image Missing Will be Uploaded Soon!!!">
+               </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="front">
+                    <img src="mole.png" class="hide" id="mole11" onclick="hit(11)" alt="Image Missing will be Uploaded Soon!!!">
+                </div>
+               <div class="back">
+                    <img src="dirt.png" class="hole" alt="Image Missing Will be Uploaded Soon!!!">
+               </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="front">
+                    <img src="mole.png" class="hide" id="mole12" onclick="hit(12)" alt="Image Missing will be Uploaded Soon!!!">
+                </div>
+               <div class="back">
+                    <img src="dirt.png" class="hole" alt="Image Missing Will be Uploaded Soon!!!">
+               </div>
+            </div>
+        </div>
+      </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="mole.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
